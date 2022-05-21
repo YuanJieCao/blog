@@ -1,4 +1,4 @@
-### 在webstorm上面push clone 到github中
+## 在webstorm上面push clone 到github中
  # 安装webstorm  
     在setting中 设置 GitHub 有三种模式一种密码登录,一种是ssh,一种是http形式（本人使用的密码登录的）
     然后你要有本地的git。在git中配置路径，可以选择test。然后下面有版本或者弹出框便是操作成功。
@@ -21,5 +21,9 @@
     坑一：因为改了名字，这样问题就出来了，你起的这个名字没有和ssh内设定的名字保持一致，所以使用命令 ssh-add ~/.ssh/你的名字
     将自己起的名字加入到ssh中 ， 
     ssh -T git@github.com这样就能到你想要的地方，
-    ssh-add -l 查看加入的密钥列表
+    
+     查看加入的密钥列表
     ssh -v git@github.com 查看调试信息
+
+## webpack 认知
+  哈哈哈哈
