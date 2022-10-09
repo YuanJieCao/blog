@@ -31,3 +31,45 @@
 
 ### 面向对象
 
+1. 函数对象`Function`
+   - 作为一个普通函数，执行的时候形成自己的私有作用域，形参赋值，预解释，代码执行，然后栈和堆的释放等
+   - 作为一个类，他有自己的实例。然后有自己的prototype的属性,指向自己的原型,有着自己的constructor指向自己
+   - 作为一个普通的对象，他有自己的私有属性，他有__proto__执行function的propotype
+
+1. 对象
+   1. 工厂模式
+   2. 构造函数模式
+   3. 组合模式
+
+1. 函数的执行，形成私有的作用域，形参赋值，预解释，代码执行，然后堆和栈的释放。
+   - 每一个对象都有一个prototype的属性，属性里有一个constructor属性指向.   --prototype指向原型object。object有__proto__指向null
+   - new 一个是实例对象，constructor指向自身。自身又有prototype属性，属性里又有constructor属性，无限循环。prototype
+
+### 数组中常用的方法
+
+1. sort、slice .join pop,map,foreach,indexof
+
+
+
+
+
+
+
+```text
+140.82.114.3 github.com
+140.82.114.10 codeload.github.com
+```
+
+
+
+
+
+
+
+
+
+### 两种
+
+1. 全部打包，需要什么那些就引用哪些，（这样就有问题，有同名的class类打包在一了一起）解决这个问题，就需要将不同的css打包，并且引用不同
+2. 将不要的c s s代码tree shaking掉，（不同的在于全局修改的element UI 样式）
+3. 有两种common的，一种是定义class类的不同来控制变量，另外一种是直接覆盖elemet ui的颜色

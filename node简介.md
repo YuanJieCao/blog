@@ -13,5 +13,7 @@
            - 关闭文件 fs.closeSync(fd)
    -异步操作，回调
    -简单文件写入：fs.writeFileSync()
-   -简单文件写入：fs.writeFileSync()
-   -流文件写入：
+   -流文件写入：同步、异步、简单文件的写入都不适合大文件的写入，性能差，容易导致内存溢出
+    可以通过监听流的open和close事件来监听流的打开和关闭   
+   -fs.createWirteStreaM();
+   
