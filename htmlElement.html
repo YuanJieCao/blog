@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .allow {
+            color: red;
+        }
+
+        .btn {
+            color: pink;
+        }
+
+        thead,
+        tfoot {
+            background-color: #3f87a6;
+            color: #FFFFFF;
+        }
+
+        tbody {
+            background-color: #e4f0f5;
+        }
+
+        caption {
+            padding: 10px;
+            caption-side: bottom;
+
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(200, 200, 155);
+            letter-spacing: 1px;
+            font-family: sans-serif;
+            font-size: .9rem;
+        }
+
+        td,
+        th {
+            border: 1px solid rgb(190, 190, 190);
+            padding: 5px 10px;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="aDiv" class="allow ">
+
+    <div id="div-01">
+        Here is div-01
+    </div>
+
+</div>
+<div id="app">
+    FooBar-FooBar-FooBar-FooBar
+</div>
+<dialog>
+    123
+</dialog>
+<input type="text">
+<button>toggleAttribute("readonly")</button>
+<hr>
+<button class="btn"></button>
+<p id="noContextMenu">这个段落右键菜单已被禁用。</p>
+<blockquote>blockquote</blockquote>
+<hr>
+<pre>123   456</pre>
+<code>This is code.</code>
+<mark>
+    mark
+</mark>
+
+<s>删除线来渲染文本</s>
+<samp>计算机程序输出</samp>
+<small>表示边注释和附属的细则，包括版权和法律文本</small>
+<hr>
+<span>短语内容的通用行内容器，并且没有特殊的语义</span>
+<time>2022/02/30</time>
+<sub>
+    定义了一个文本区域，出于排版的原因，与主要的文本相比应该展示的更低并且更小
+</sub>
+<sup>
+    定义了一个文本区域，出于排版的原因，与主要的文本相比应该展示的更高并且更小
+</sup>
+<u>渲染为一个为一个实体的下划线，可以用css来替换</u>
+<hr>
+<var style="background-color: #8c939d">
+    表示数学表达式或者编程上下文中的变量名称
+</var>
+<del>表示那些被删除的</del>
+<ins>表示那些被插入的内容</ins>
+<audio>
+    <!--    视频流-->
+    <track>
+    <!--   字幕-->
+</audio>
+
+
+<hr>
+<h1>图像和多媒体</h1>
+<area shape="111" coords="111" href="111" alt="111">
+<!--事-->
+<!-- 表示段落级元素之间的主题转换    一个故事中的场景-->
+<ul>
+    <ol>我是有序</ol>
+    <ol>我是有序</ol>
+</ul>
+
+<menu>
+
+    <li>有序列表</li>
+    <li>无序列表</li>
+</menu>
+
+<hr>
+<!--表单-->
+
+
+<datalist></datalist>
+
+<!--表格-->
+<table>
+    <caption>
+        Council budget in 2022
+    </caption>
+    <thead>
+    <tr>
+        <th colspan="2">表格的行</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<button autofocus>
+    自动聚焦
+</button>
+
+
+<form action="" method="get" class="form-example" target="_blank">
+    <div class="form-example">
+        <label for="name">输入你的姓名</label>
+        <input type="text" name="name" id="name" autocomplete="这个表单有默认值" aria-required="true">
+    </div>
+    <div class="form-example">
+        <label for="email">输入你的姓名</label>
+        <input type="text" name="name" id="email" aria-required="true">
+    </div>
+    <div class="form-example">
+        <input type="submit" aria-valuenow="Subscrible">
+        <input type="image" formaction="formaction">
+    </div>
+</form>
+
+
+<form action="">
+    <fieldset>
+        <legend>
+            Choose your favourite monster
+        </legend>
+        <input type="radio" id="kraken" name="monster">
+        <label for="kraken">Kraken</label><br/>
+
+        <input type="radio" id="sasquatch" name="monster">
+        <label for="sasquatch">Sasquatch</label><br/>
+
+        <input type="radio" id="mothman" name="monster">
+        <label for="mothman">Mothman</label>
+    </fieldset>
+</form>
+<div>
+    <label for="out-selection">选选选</label>
+    <select name="out-selection" id="out-selection">
+        <optgroup label="Group1">
+            <option>123</option>
+            <option>456</option>
+        </optgroup>
+        <optgroup label="Group2">
+            <option>123</option>
+            <option>456</option>
+        </optgroup>
+    </select>
+</div>
+
+
+<label for="File"></label>
+<progress id="File" max="100" value="70">70%</progress>
+
+<details>
+    <summary>Details</summary>
+    Something small enough to escape casual notice!!
+</details>
+
+
+<dialog id="favDialog"
+
+>
+    <form method="dialog">
+        <p>
+            <label>
+                Favorite animal:
+                <select>
+                    <option value="default">
+                        选项一
+                    </option>
+                    <option value="default">
+                        选项二
+                    </option>
+                    <option value="default">
+                        选项三
+                    </option>
+                </select>
+            </label>
+        </p>
+        <div>
+            <button value="cancel">cancel</button>
+            <button id="ConfirmBtn" value="default">confirm</button>
+        </div>
+    </form>
+
+</dialog>
+
+<p>
+    <button id="updateDetails"> Update details</button>
+</p>
+<output></output>
+<!-- 导入表单用户-->
+
+<!--先存在数据库 -->
+<!--登录的时候在存在数据库-->
+
+
+<!--呈现了一组用户可执行或激活的命令-->
+<!--通常是引用内容-->
+<address> 我和我的组织的联系方式</address>
+</body>
+<script>
+
+    const updateBtn=document.querySelector("#updateDetails")
+    const favDialog = document.getElementById('favDialog');
+    const outputBox = document.querySelector('output');
+    const selectEl = favDialog.querySelector('select');
+    const confirmBtn = favDialog.querySelector('#confirmBtn');
+
+    if ( typeof favDialog.showModal !== 'function' ) {
+        favDialog.hidden = true;
+    }
+    updateBtn.addEventListener('click', function onOpen() {
+        if (typeof favDialog.showModal === "function") {
+            favDialog.showModal();
+        } else {
+            outputBox.value = "Sorry, the <dialog> API is not supported by this browser.";
+        }
+    });
+    selectEl.addEventListener('change', function onSelect(e) {
+        confirmBtn.value = selectEl.value;
+    });
+    favDialog.addEventListener('close', function onClose() {
+        outputBox.value = favDialog.returnValue + " button clicked - " + (new Date()).toString();
+    });
+
+
+
+
+
+    const details = document.querySelector("details")
+    details.addEventListener("toggle", (e) => {
+        if (details.open) {
+
+        } else {
+        }
+        console.log(details.open)
+    })
+    //    这些标签能标识内容，对seo很重要
+
+
+    // html 元素参考
+    // 文档元数据 Metadata 含有页面的相关信息，包括样式，脚本
+    // <head></head> 规定文档相关的配置文件
+    //<link></link> 外部资源链接元素
+    //<meta></meta> 不能由html元相关的元素表示的metaData 信息
+    //title 他应该只包含文本，如果右标签应该被忽略
+    //body 分区根元素
+    //内容分区  语义化标签
+    //<address></address> 某个人的或某个组织的联系信息
+    //<article></article> 表示文档，页面，应用或者网站中的独立结构
+    //<aside></aside> 独立的
+    //<footer></footer> 表示最近一个章节内容或者根节点 作者或者版权数据或者与文档相关的链接信息
+    //<header> 包含其他元素，比如logo 搜索框 作者名称
+    //main 呈现主体部分
+    const aDiv = document.querySelector("#aDiv")
+    const app = document.querySelector("#app")
+    const button = document.querySelector(".btn");
+    const input = document.querySelector("input");
+
+    //java
+    //前端  在浏览器端的调试，以及它拥有的开发者模式的功能,在不同场景下
+    //html CSS JS  不谈其中的技术和功能的实现 --->项目的落地--->前端的打包部署-->前端的部署--->移动端和桌面端--->和nginx转发部署--->
+    //框架 组件
+    //DOM BOM
+    //vue +ts 导入导出
+    //
+
+    noContext = document.getElementById('noContextMenu');
+
+    noContext.addEventListener('contextmenu', e => {
+        alert('请不要鼠标右击')
+        e.preventDefault();
+    });//会在用户尝试打开上下文菜单时被促发
+
+
+    // 鼠标事件
+    //  onauxclick()//按下除了鼠标左键的键会触发的事件
+    function random(number) {
+        return Math.floor(Math.random() * number);
+    }
+
+    button.onclick = function () {
+        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        button.style.backgroundColor = rndCol;
+    };
+
+    button.onauxclick = function () {
+        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        button.style.color = rndCol;
+    }
+
+
+    button.addEventListener("click", () => {
+        input.toggleAttribute("readonly")
+    })//切换属性 如果不存在就添加，存在就删除
+    app.scrollBy(1000, 1000)
+    aDiv.scroll({top: 100, left: 100, behavior: 'smooth'})
+
+    aDiv.removeAttribute("class")
+    aDiv.setAttribute("style", "color:pink")
+    // aDiv.insertAdjacentText("beforebegin", 123)//beforeBegin 在该元素的前面，
+    // aDiv.insertAdjacentElement("afterend", app)//afterend 在该元素的后面
+    // aDiv.insertAdjacentText("afterbegin",app)//afterbegin 在这个元素的之前
+    // aDiv.insertAdjacentText("beforeend",app)//beforeend 在这个元素里面的end
+    // console.log(baseUrl.computedStyleMap())
+    //afterbegin 在该元素当中，在该元素的第一个孩子之前
+    //beforeend 在该元素当中，在该元素最后一个子孩子的后面
+    //afterend 在该元素的本身的后面
+
+    //一个DomRect 对象
+    // console.log(h.getBoundingClientRect())
+    // console.log(baseUrl.getAttributeNames())
+
+    // baseUrl.dispatchEvent()
+
+    //匹配指定选择器且离开当前元
+    //
+    // baseUrl.onfullscreenchange = () => {
+    //     alert(1)
+    // }
+
+
+    // const baseUrl = document.querySelector("#app")
+    // const h = document.querySelector("h1")
+
+    //Element 的一些属性方法
+
+    //元素和padding的宽
+    // console.log(h.scrollWidth)//元素内容宽度的一种度量，包括overflow溢出不可见的内容
+
+    // console.log(h.nodeValue)
+
+
+    // h.normalize()//对该元素下的所有文本子节点进行整合
+    // console.log(baseUrl.nodeType)//返回该节点对应的值
+
+    // console.log(baseUrl.nodeName)//返回一个包含该节点的名字的domstring或者是别名
+    //
+    // console.log(baseUrl.baseURI)//返回一个代表baseUrl的string
+    // console.log(baseUrl.isConnected)//返回该节点是否链接到一个上文下中
+
+</script>
+</html>
+
+<!--
+element 所有的document下的对象都是继承自他
+
+所有的属性都继承自他的祖先接口，并且扩展了父接口
+
+Node 是一个接口
+-->
