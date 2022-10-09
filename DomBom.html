@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM and BOM</title>
+</head>
+<body onload="init()">
+<div id="app">
+    <button style="background-color: #0ccda3" id="example">Click me</button>
+</div>
+<div id="cyj">
+    <!--    <img src="#" alt="haha">-->
+</div>
+<div id="svg"></div>
+
+<script>
+    function overHandler(ev) {
+        // Determine the target event's gotpointercapture handler
+        var gotCaptureHandler = ev.target.ongotpointercapture;
+    }
+    function init() {
+        var el=document.getElementById("target");
+        el.ongotpointercapture = overHandler;
+    }
+    //    DomContentLoaded
+    // 加载和卸载事件 等待文字都加载完就触发 无需等待样式表、图像和子框架完成的加载
+    document.addEventListener("DOMContentLoaded", function () {
+        prompt("输入值？ ", "")
+    })
+
+    //    全屏事件
+    document.addEventListener("fullscreenchange", function () {
+        alert(1)
+    })
+
+
+    //    拖放事件
+
+
+    //    剪切板事件
+    document.addEventListener("copy", () => {
+        alert("谁让你赋值的")
+    })
+
+    document.addEventListener("cut", () => {
+        alert("谁让你赋值的")
+    })
+    document.addEventListener("paste", () => {
+        alert("谁让你赋值的")
+    })
+    //            事件
+
+
+    //    Document 继承自HTMLDoucment 接口
+
+
+    // document.addEventListener("mousemove", () => {
+    //     // document.open()
+    //     document.writeln("123")
+    //     document.writeln("345")
+    //     document.write("<h1>我是新的文档内容 </h1>")//会自动触发
+    //     document.write("<p>我是新的文档内容 </p>")
+    //     // document.close()
+    //     //聚焦 判断焦点是否位于给定的文档内
+    //     console.log(document.hasFocus())
+    // })
+
+
+    //    document 的方法继承自Node 和EventTarget接口
+
+    console.log(document.getSelection())
+
+
+    console.log(document.elementFromPoint(23, 2))
+
+
+    console.log(document.createTextNode("123"))//创建文本节点
+
+    // web worker
+
+
+    //创建一个文档片段
+    const cyj = document.querySelector("#cyj")
+    const fragment = document.createDocumentFragment()
+    const btn = document.createElement("h1")
+    const btn2 = document.createElement("h1")
+    btn.innerHTML = "hello fragment"
+    btn2.innerHTML = "hello replaceChild"
+    fragment.appendChild(btn)
+    fragment.appendChild(btn2)
+    fragment.replaceChild(btn2, btn)
+    cyj.appendChild(fragment)
+    //
+    // console.log(fragment)
+
+    const comment = document.createComment("123")
+    console.log(comment)
+
+
+    //扩展 DOMparse 可以将存在字符串中的xml和html解析为一个dom对象  也可以使用XMLSerializer 执行相反的操作
+    var docu = new DOMParser().parseFromString('<xml></xml>', 'application/xml');
+
+    const CDATASection = docu.createCDATASection('Some <CDATA> data & then some')//CDATA片段节点   在xml中可以包含未经转义的字符的例如<
+    docu.getElementsByTagName('xml')[0].appendChild(CDATASection)
+    // alert( new XMLSerializer().serializeToString(docu))
+    const styleNs = document.createAttributeNS("http://www.w3.org/2000/svg", "viewBox")//使用指定的命名空间url和限定名称创建一个新的实现了Attr接口的节点
+
+    const style = document.createAttribute("style")//创建并且返回一个实现了ATTR新的属性节点，
+    // document.append()
+
+    //    Document接口继承自HTMlDocument 接口，扩展了这些方法
+    console.log(document.title)
+    console.log(document.referrer)
+    console.log(document.cookie)
+    console.log(document.images)
+    console.log(document.head)
+    //返回当前的<head></head>
+    console.log(document.documentURI)
+    //返回当前文档的路径
+    console.log(document.documentElement)
+    //返回当前文档的直接子节点
+    console.log(document.contentType)
+    //MIME类型 返回他的content-Type
+    console.log(document.compatMode)
+    console.log(document.children)
+    //当前文档的子元素不就是HTMLDocument
+    console.log(document.childElementCount)
+    console.log(document.characterSet)
+    //什么叫做文档正在被使用的
+    console.log(document.activeElement)
+    console.log(document.adoptedStyleSheets)
+    const app = document.querySelector("#app")
+    const element = document.querySelector("#example");
+    element.addEventListener("click", function () {
+    });
+
+</script>
+
+</body>
+</html>
+
+<!--
+Dom接口和Bom接口
+Attr
+    elment.getAttributeNode() 通过字符串获取值，
+    elment.getAttributeNode("id") 返回Attr类型
+
+Document
+
+
+
+HtmlDocument
+
+
+XMLDocument
+-->
