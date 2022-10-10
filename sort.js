@@ -108,47 +108,6 @@ function merge(left, right, compareFn) {
 }
 
 
-//快速排序，对于一个数组选取元，然后左右指针，将值进行划分，然后再次将划分完的数据进行快速排序
-
-function quickSort(array, compareFn = defaultCompare) {
-    return quick(array, 0, array.length - 1, compareFn);
-}
-
-function quick(array, left, right, compareFn) {
-    let index; // {1}
-    if (array.length > 1) { // {2}
-        index = partition(array, left, right, compareFn); // {3}
-        if (left < index - 1) { // {4}
-            quick(array, left, index - 1, compareFn); // {5}
-        }
-        if (index < right) { // {6}
-            quick(array, index, right, compareFn); // {7}
-        }
-    }
-    return array;
-};
-
-
-function partition(array, left, right, compareFn) {
-    const pivot = array[Math.floor((right + left) / 2)]; // {8}
-    let i = left; // {9}
-    let j = right; // {10}
-    while (i <= j) { // {11}
-        while (compareFn(array[i], pivot) === "Compare.LESS_THAN") { // {12}
-            i++;
-        }
-        while (compareFn(array[j], pivot) === "Compare.BIGGER_THAN") { // {13}
-            j--;
-        }
-        if (i <= j) { // {14}
-            swap(array, i, j); // {15}
-            i++;
-            j--;
-        }
-    }
-    return i; // {16}
-}
-
 // let m = [1, 3, 2, 8, 7, 5, 6, 999]
 
 
@@ -189,8 +148,7 @@ function findMaxValue(array) {
 //分解原问题为多个子问题
 //解决子问题在返回
 //组合这些的问题
-let m = [1, 3, 2, 8, 7, 5, 6, 999]
-console.log(countingSort(m))
+
 console.log("\s")
 
 //分而治治
@@ -279,7 +237,6 @@ function fibonacci(n, memory) {
     return memory[n]
 }
 
-console.log(action(10))
 
 function fibonacciFor(n) {
     if (n == 1 || n == 2) {
@@ -294,5 +251,169 @@ function fibonacciFor(n) {
     return dp[n]
 }
 
+
 //空间换取时间
 console.log(fibonacciFor(10))
+
+//快速排序，对于一个数组选取元，然后左右指针，将值进行划分，然后再次将划分完的数据进行快速排序
+
+function quickSort(array, compareFn = defaultCompare) {
+    return quick(array, 0, array.length - 1, compareFn);
+}
+
+function quick(array, left, right, compareFn) {
+    let index; // {1}
+    if (array.length > 1) { // {2}
+        index = partition(array, left, right, compareFn); // {3}
+        if (left < index - 1) { // {4}
+            quick(array, left, index - 1, compareFn); // {5}
+        }
+        if (index < right) { // {6}
+            quick(array, index, right, compareFn); // {7}
+        }
+    }
+    return array;
+};
+
+
+function partition(array, left, right, compareFn) {
+    const pivot = array[Math.floor((right + left) / 2)]; // {8}
+    let i = left; // {9}
+    let j = right; // {10}
+    while (i <= j) { // {11}
+        while (compareFn(array[i], pivot) === "Compare.LESS_THAN") { // {12}
+            i++;
+        }
+        while (compareFn(array[j], pivot) === "Compare.BIGGER_THAN") { // {13}
+            j--;
+        }
+        if (i <= j) { // {14}
+            swap(array, i, j); // {15}
+            i++;
+            j--;
+        }
+    }
+    return i; // {16}
+}
+
+//快速排序 选取主元
+function fastSort(array, compareFn = defaultCompare) {
+    return fastQuick(array, 0, array.length - 1, compareFn = defaultCompare)
+}
+
+function fastQuick(array, left, right, compareFn) {
+    let index
+    if (right - left > 1) {
+
+        index = fastPartition(array, left, right, compareFn)
+        if (index - left > 1) {
+            fastQuick(array, left, index - 1, compareFn)
+        }
+        if (index < right) {
+            fastQuick(array, index, right, compareFn)
+        }
+    }
+    return array
+}
+
+function fastPartition(array, left, right, compareFn) {
+    const pivot = array[Math.floor((right + left) / 2)]//这个才是主元
+    let i = left //处理两个数组的问题，左右指针
+    let j = right
+    //左右指针没有相遇就一直循环
+    while (i <= j) {
+        //当左边的数值比右边大时
+        while (compareFn(array[i], pivot) === "Compare.LESS_THAN") {
+            i++
+        }
+        while (compareFn(array[j], pivot) === "Compare.BIGGER_THAN") {
+            j--
+        }
+        //除了上面的两种情况之外，其他的情况都是需要进行交换
+        if (i <= j) {
+            swap(array, i, j)
+            i++
+            j--
+        }
+    }
+    return i
+}
+
+let money = [2, 7, 9, 3, 1]
+//
+// dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1])
+function knapSack(capacity, weights, values, n) {
+    const kS = [];
+    for (let i = 0; i <= n; i++) { // {1}
+        kS[i] = [];
+    }
+    for (let i = 0; i <= n; i++) {
+        for (let w = 0; w <= capacity; w++) {
+            if (i === 0 || w === 0) { // {2}
+                kS[i][w] = 0;
+            } else if (weights[i - 1] <= w) { // {3}
+                const a = values[i - 1] + kS[i - 1][w - weights[i - 1]];
+                const b = kS[i - 1][w];
+                kS[i][w] = a > b ? a : b; // {4} max(a,b)
+            } else {
+                kS[i][w] = kS[i - 1][w]; // {5}
+            }
+        }
+    }
+
+    findValues(n, capacity, kS, weights, values); // {6} 增加的代码
+    return kS[n][capacity]; // {7}
+}
+
+function findValues(n, capacity, kS, weights, values) {
+    let i = n;
+    let k = capacity;
+    console.log('构成解的物品：');
+    while (i > 0 && k > 0) {
+        if (kS[i][k] !== kS[i - 1][k]) {
+            console.log(`物品 ${i} 可以是解的一部分 w,v: ${weights[i - 1]}, ${values[i - 1]}`);
+            i--;
+            k -= kS[i - 1][k];
+        } else {
+            i--;
+        }
+    }
+}
+
+//奇偶性
+const values = [3, 4, 5],
+    weights = [2, 3, 4],
+    capacity = 5,
+    n = values.length;
+
+
+//小偷一代
+let moneyAll = [1, 2, 8, 7, 3]
+//有n房子，0到n-1
+let rob = function (nums) {
+    const len = nums.length
+    if (len === 0) return 0
+    if (len === 1) return nums[0]
+    const dp = new Array(len)//定义一个空数组
+    dp[0] = nums[0]
+    dp[1] = Math.max(nums[0], nums[1])
+    for (let i = 2; i < len; i++) {
+        //
+        dp[i] = Math.max(nums[i] + dp[i - 2], dp[i - 1])
+    }
+    return dp[len - 1]
+}
+
+console.log(rob(moneyAll))
+
+
+//小偷二代
+let moneyAllAll = [1, 3, 2]
+//偷最后一个不能偷第一个
+//
+let rob2 = function (nums) {
+
+
+}
+
+

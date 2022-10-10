@@ -245,13 +245,13 @@
 </body>
 <script>
 
-    const updateBtn=document.querySelector("#updateDetails")
+    const updateBtn = document.querySelector("#updateDetails")
     const favDialog = document.getElementById('favDialog');
     const outputBox = document.querySelector('output');
     const selectEl = favDialog.querySelector('select');
     const confirmBtn = favDialog.querySelector('#confirmBtn');
 
-    if ( typeof favDialog.showModal !== 'function' ) {
+    if (typeof favDialog.showModal !== 'function') {
         favDialog.hidden = true;
     }
     updateBtn.addEventListener('click', function onOpen() {
@@ -267,9 +267,6 @@
     favDialog.addEventListener('close', function onClose() {
         outputBox.value = favDialog.returnValue + " button clicked - " + (new Date()).toString();
     });
-
-
-
 
 
     const details = document.querySelector("details")
