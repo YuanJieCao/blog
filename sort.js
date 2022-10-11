@@ -16,7 +16,7 @@ function bubbleSort(array, compareFn = defaultCompare) {
     //最后的
     for (let i = array.length - 1; i >= 0; i--) {
         for (let j = 0; j < i; j++) {
-            if (compareFn(array[i], array[j]) == "Compare.LESS_THAN") {
+            if (compareFn(array[i], array[j]) === "Compare.LESS_THAN") {
                 swap(array, i, j)
             }
         }
@@ -28,7 +28,7 @@ function bubbleSort(array, compareFn = defaultCompare) {
 function bubbleSort_book(array, compareFn = defaultCompare) {
     for (let i = 0; i < array.length; i++) {
         for (let j = i + 1; j < array.length - 1; j++) {
-            if (compareFn(array[i], array[j]) == "Compare.BIGGER_THAN") {
+            if (compareFn(array[i], array[j]) === "Compare.BIGGER_THAN") {
                 swap(array, i, j)
             }
         }
@@ -45,7 +45,7 @@ function selectionSort(array, compareFn = defaultCompare) {
     for (let i = 0; i < length - 1; i++) {
         indexMin = i
         for (let j = i; j < length; j++) {
-            if (compareFn(array[indexMin], array[j]) == "Compare.BIGGER_THAN") {
+            if (compareFn(array[indexMin], array[j]) === "Compare.BIGGER_THAN") {
                 indexMin = j
             }
         }
@@ -54,7 +54,7 @@ function selectionSort(array, compareFn = defaultCompare) {
         }
     }
     return array;
-};
+}
 
 
 // 插入排序
@@ -75,6 +75,18 @@ function insertionSort(array, compareFn = defaultCompare) {
         array[j] = temp
     }
     return array
+}
+
+function guiBinSort(arr, compareFn = defaultCompare) {
+    if (arr.length > 1) {
+        const {length} = arr
+        const middle = Math.floor(length / 2);
+        let left = guiBinSort(arr.slice(0, middle), compareFn);
+        let right = guiBinSort(arr.slice(middle, length), compareFn);
+        //
+        arr = merge(left, right, compareFn)
+    }
+    return arr
 }
 
 
