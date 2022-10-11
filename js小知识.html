@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="app"></h1>
+<button onclick="changeValue()"> change a Storage Item</button>
+<script>
+    // storage 添加，修改，删除存储的数据项 会话存储使用sessionStorage,操作本地储存localStorage
+    // localStorage 都特定于页面的协议 总是以字符串形式存储
+    // utf-16 sessionStorage 会在页面会话结束时被清楚 在新标签或者窗口打开一个页面时会复制顶级浏览会话的上下文作为新会话的上下文
+    window.addEventListener("storage", myFunction)
+
+    function myFunction(event) {
+        document.getElementById("app").innerHTML = "change Made"
+    }
+
+    function changeValue() {
+        const newWindow = window.open("", "mywindow")
+        newWindow.localStorage.setItem("mytime", Date.now())
+        newWindow.close();
+    }
+
+    //      http无状态，两次请求之间是没有关系的，使用Cookies可以创建有状态的会话
+    //      开销大，http/1.1引入流水线和持久链接的概念，使用connection
+    //    http/2 连接复用消息的方式
+    //   通过http控制的常见特性 缓存文件 开放同源限制 认证一些页面被保护起来
+    //    http2 被封装在帧里面
+    //    不同种类的缓存
+    //    私有缓存 指浏览器缓存 cache-control:private
+    //    共享缓存 客户端与服务器之间 细分为代理缓存和托管缓存
+    //    验证响应
+    //    if-modified-since 和 max-age 联合看如果没有超过时间那么就是 304 not modified
+    //    if-none-match hash E-tag 如果响应是陈旧的，那么将etag 放大请求头上 如果相同返回 304 Not  modified  如果不同会返回200并且更新资源
+    //     cache-control:no-cache 协商缓存，不会阻止响应的存储，阻止在没有重新验证的情况下重用响应，强制验证 或者cache-control:max-age=0,must-revalidate
+    //     cache-control： no-store 不缓存 出于隐私原因，不希望储存响应 始终提供最新消息，
+    //     重新加载和强制重新加载 不会重用在进行验证
+    //    没有cache-control 不仅仅是不缓存而是根据所谓的启发式缓存进行隐式缓存
+    //    access-control-allow-origin
+</script>
+</body>
+</html>

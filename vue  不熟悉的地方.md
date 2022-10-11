@@ -33,6 +33,31 @@ return {id:$route.query.id,titile:"123"}
 
 ## 路由的replace模式
 
+`router-link`
+
+this.$route包含fullpath
+hash
+matched
+meta
+name
+params
+path
+query
+
+
+this.$router
+包含afterhooks 
+app 
+apps 
+beforeHooks 
+fallback 
+history 
+matcher :addRoutes match
+mode 
+options linkActiveClass:active mode:history
+ resolveHooks
+
+
 replace模式是替换当前的路由，一种类似于push 往栈的里面追加
 
 ```
