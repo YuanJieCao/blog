@@ -32,7 +32,7 @@
     //    私有缓存 指浏览器缓存 cache-control:private
     //    共享缓存 客户端与服务器之间 细分为代理缓存和托管缓存
     //    验证响应
-    //    if-modified-since 和max-age 联合看如果没有超过时间那么就是 304 not modified
+    //    if-modified-since 和 max-age 联合看如果没有超过时间那么就是 304 not modified
     //    if-none-match hash E-tag 如果响应是陈旧的，那么将etag 放大请求头上 如果相同返回 304 Not  modified  如果不同会返回200并且更新资源
     //     cache-control:no-cache 协商缓存，不会阻止响应的存储，阻止在没有重新验证的情况下重用响应，强制验证 或者cache-control:max-age=0,must-revalidate
     //     cache-control： no-store 不缓存 出于隐私原因，不希望储存响应 始终提供最新消息，
