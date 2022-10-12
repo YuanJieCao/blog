@@ -93,11 +93,16 @@ function guiBinSort(arr, compareFn = defaultCompare) {
 //归并排序  分而治之
 function mergeSort(array, compareFn = defaultCompare) {
     //终止条件
+    let i = 0
     if (array.length > 1) {
         const {length} = array;
         const middle = Math.floor(length / 2);//中间值，对于递归来说，压栈然后出栈
         const left = mergeSort(array.slice(0, middle), compareFn);
+        console.log(left)
+        console.log("++")
         const right = mergeSort(array.slice(middle, length), compareFn);
+        console.log(right)
+        console.log("__")
         array = merge(left, right, compareFn);
     }
     return array;
@@ -118,9 +123,6 @@ function merge(left, right, compareFn) {
     //将剩下的截取放到新的数组中
     return result.concat(i < left.length ? left.slice(i) : right.slice(j)); // {9}
 }
-
-
-// let m = [1, 3, 2, 8, 7, 5, 6, 999]
 
 
 //计数排序
@@ -426,6 +428,76 @@ let moneyAllAll = [1, 3, 2]
 let rob2 = function (nums) {
 
 
+}
+
+
+//归并排序
+//递归,
+function newMergeSort(arr, compare = defaultCompare) {
+    if (arr.length > 1) {
+        let newArray = []
+        const {length} = arr
+        let middle = Math.floor(length / 2)
+        var left = newMergeSort(arr.slice(0, middle), compare)
+        // console.log(left)
+        // console.log("++")
+        var right = newMergeSort(arr.slice(middle, length), compare)
+        // console.log(right)
+        // console.log("--")
+
+        arr = newMerge(left, right, compare, newArray);
+    }
+    return arr
+//    有一个栈merge一
+}
+
+function newMerge(left, right, compare, newArray) {
+    let len = 0
+    let rig = 0
+
+    while (len < left.length && rig < right.length) {
+        if (left[len] < right[rig]) {
+            newArray.push(left[len])
+            len++
+        } else {
+            newArray.push(right[rig])
+            rig++
+        }
+    }
+    //如果在退出之前的循环，之后后面还有值
+    if (len < left.length) {
+        newArray.push(...left.slice(len))
+    }
+    if (rig < right.length) {
+        newArray.push(...right.slice(rig))
+    }
+    //只要有一方不是0
+    return newArray
+}
+
+let mergeArray = [1, 6, 5, 2, 4]
+console.log(newMergeSort(mergeArray))
+
+
+//快速排序
+function quickSort(arr) {
+
+    // 当list.length <= 1时，退出递归
+    if (arr.length <= 1) return arr;
+    // 找到中间节点
+    let mid = Math.floor(arr.length / 2);
+    // 以中间节点为基准点，比该节点大的值放到right数组中，否则放到left数组中
+    let base = arr.splice(mid, 1)[0];
+    let left = [];
+    let right = [];
+    arr.forEach(item => {
+        if (item > base) {
+            right.push(item);
+        } else {
+            left.push(item);
+        }
+    });
+    return quickSort(left).concat(base, quickSort(right));
 }
 
 
