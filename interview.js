@@ -504,9 +504,72 @@ class LazyMan {
 //  [3,5,7,1,2,8] 的 LIS 是 [3,5,7,8]
 //  动态规划  一段序列  dp[i]
 
-//最后一个是必须选的
 
-function longSon(arr) {
-    
+//compose 函数
+
+//防抖节流
+function MyDebounce(fn, time, flag) {
+    let timer;
+    return function (...args) {
+        timer && clearTimeout()
+
+        if (flag && !timer) {
+            fn.apply(this, args)
+        }
+        timer = setTimeout(() => {
+            fn.apply(this, args)
+        }, time)
+    }
 }
 
+function fn(a) {
+    console.log("执行", a)
+}
+
+let debounceFn = MyDebounce(fn, 3000, true)
+
+//利用闭包，不管触发评率有多高，每隔一段时间内执行一次
+function throte(fn, delay, flag) {
+    let timer;
+    return function (args) {
+        if (flag) {
+            fn()
+            flag = false
+        }
+        if (!timer) {
+            timer = setTimeout(() => {
+                fn.apply(this, args)
+                timer = null
+            }, delay)
+        }
+    }
+}
+
+
+//模仿其他语言的sleep 阻塞主线程
+function sleep(fn, delay) {
+    let start = new Date().getTime()
+    while (new Date().getTime() - start < delay) {
+        continue;
+    }
+    fn()
+}
+
+function sleep2(fn, time) {
+    //new promise
+    new Promise(resolve => setTimeout(resolve, time)).then(() => {
+        fn()
+    })
+}
+
+sleep2(() => {
+    console.log(2)
+}, 2000)
+
+
+//执行上下文
+// 全局执行上下文
+// 函数执行上下文
+//创建执行上下文和执行阶段
+// this值的决定
+// 创建词法环境 环境记录器，外部环境的引用
