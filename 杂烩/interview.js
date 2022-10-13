@@ -508,42 +508,8 @@ class LazyMan {
 //compose 函数
 
 //防抖节流
-function MyDebounce(fn, time, flag) {
-    let timer;
-    return function (...args) {
-        timer && clearTimeout()
-
-        if (flag && !timer) {
-            fn.apply(this, args)
-        }
-        timer = setTimeout(() => {
-            fn.apply(this, args)
-        }, time)
-    }
-}
-
-function fn(a) {
-    console.log("执行", a)
-}
-
-let debounceFn = MyDebounce(fn, 3000, true)
 
 //利用闭包，不管触发评率有多高，每隔一段时间内执行一次
-function throte(fn, delay, flag) {
-    let timer;
-    return function (args) {
-        if (flag) {
-            fn()
-            flag = false
-        }
-        if (!timer) {
-            timer = setTimeout(() => {
-                fn.apply(this, args)
-                timer = null
-            }, delay)
-        }
-    }
-}
 
 
 //模仿其他语言的sleep 阻塞主线程
@@ -573,3 +539,80 @@ sleep2(() => {
 //创建执行上下文和执行阶段
 // this值的决定
 // 创建词法环境 环境记录器，外部环境的引用
+//全局执行上下文中，this指向的是window use
+//函数执行上下文中，this的值取决于那个函数如何被调用，如果是被一个引用对象调用，那么this会设置成那个对象，否则指向全局对象或者undefined
+//词法环境 标识符-变量映射的结构（标识符变量的名字-实际对象的地址）
+
+//词法环境有两个组件   当前环境记录器 储存变量，和函数申明的实际位置，一个外部环境的引用，访问父级词法结构
+//词法环境有两种类型：全局环境()  在函数环境：函数内部用户定义的变量存储在环境记录器中，并且引用的外部环境可能是全局环境，或者任何包含此内部函数
+//环境记录器也有两种类型，申明式环境记录器，存储变量，函数，和参数。对象环境记录器用来定义出现在全局上下文中的变量和函数关系
+//对于函数环境，申明式环境记录器
+
+
+let a = 20;
+const b = 30;
+var c;
+
+function multiply(e, f) {
+    var g = 20;
+    return e * f * g;
+}
+
+c = multiply(20, 30)
+
+
+GlobalExectionContext = {
+    ThisBinding: "<Global Object>",//绑定
+    //词法环境
+    LexicalEnvironment: {
+        //对象环境记录器
+        EnvironmentRecord: {
+            Type: "Object",
+            a: "< uninitialized >",
+            b: " < uninitialized >",
+            multiply: " < func >"
+        },
+        outer: "<null>"
+    },
+    //变量环境 记录var变量，let const 是在函数环境中
+    VariableEnvironment: {
+        EnvironmentRecord: {
+            Type: "Object",
+            // 在这里绑定标识符
+            c: undefined,
+        },
+        outer: "<null>"
+    }
+
+}
+
+//函数环境 只有调用multiply才会创建上下文，然后执行上下文
+FunctionExectionContext = {
+
+    ThisBinding: "<Global Object>",
+    // 词法环境
+    LexicalEnvironment: {
+        //声明式环境记录器
+        EnvironmentRecord: {
+            Type: "Declarative",
+            Arguments: {0: 20, 1: 30, length: 2}
+            //
+        },
+        outer: "<GlobalLexicalEnvironment>"
+    },
+    VariableEnvironment: {
+        EnvironmentRecord: {
+            Type: "Declarative",
+            g: undefined
+        },
+        outer: "<GlobalLexicalEnvironment>"
+    }
+}
+
+
+//  MutationObserver 提供了监视对dom树所做更改的能力
+//  requestAnimationFrame 告诉浏览器你希望执行一个动画，并且要求浏览器在下一次重绘之前调用指定的回调函数
+
+
+
+//  MessageChannel

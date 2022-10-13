@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Channel messaging demo</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<h1>Channel messaging demo</h1>
+<p class="output">My body</p>
+<div id="some-id">
+    <div>123</div>
+</div>
+<!--嵌入的html-->
+<!--<iframe src="page2.html" width='480' height='320'></iframe>-->
+</body>
+<script>
+    // 选择需要观察变动的节点
+    const targetNode = document.getElementById('some-id');
+
+    // 观察器的配置（需要观察什么变动）
+    const config = { attributes: true, childList: true, subtree: true };
+
+    // 当观察到变动时执行的回调函数
+    const callback = function(mutationsList, observer) {
+        // Use traditional 'for loops' for IE 11
+        for(let mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+                console.log('A child node has been added or removed.');
+            }
+            else if (mutation.type === 'attributes') {
+                console.log('The ' + mutation.attributeName + ' attribute was modified.');
+            }
+        }
+    };
+
+    // 创建一个观察器实例并传入回调函数
+    const observer = new MutationObserver(callback);
+
+    // 以上述配置开始观察目标节点
+    observer.observe(targetNode, config);
+
+    // 之后，可停止观察
+    observer.disconnect();
+
+
+
+
+
+
+    // var channel = new MessageChannel();//带有两个端口的新对象
+    //
+    //
+    // var output = document.querySelector('.output');
+    // var iframe = document.querySelector('iframe');
+    //
+    // // Wait for the iframe to load
+    // iframe.addEventListener("load", onLoad);
+    //
+    // function onLoad() {
+    //     console.log(1)
+    //     // Listen for messages on port1
+    //     channel.port1.onmessage = onMessage;//先给注册了一个回调
+    //     // Transfer port2 to the iframe
+    //     console.log(iframe.contentWindow)//返回一个window的代理
+    //     //分发一个事件 其他窗口的引用 发送到另一个window的数据，通过窗口的origin属性来指定哪些窗口能解都到消息处理
+    //     iframe.contentWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+    // }
+    //
+    // // Handle messages received on port1
+    // function onMessage(e) {
+    //     output.innerHTML = e.data;
+    // }
+</script>
+</html>

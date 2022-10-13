@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function doSomething() {
+    // }
+    //
+    // console.log(doSomething.prototype);
+    // doSomething.prototype.foo = "bar";
+    //
+    // let doSomeInstancing= new doSomething()
+    // console.log(doSomeInstancing)
+    // doSomeInstancing.prop = "some value";
+    // console.log(doSomeInstancing)
+    // 和声明函数的方式无关，
+    // JavaScript 中的函数永远有一个默认原型属性。
+    //Class
+    class Point {
+        constructor() {
+            this.name="123"
+        }
+    }
+
+    console.log(Point)
+    const m = Object.getPrototypeOf(Point)
+    console.log(m)
+    const ad= Object.getPrototypeOf(m)
+    console.log(typeof Point); // "function"
+    console.log(Object.getPrototypeOf(ad))
+</script>
+</body>
+</html>

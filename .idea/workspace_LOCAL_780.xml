@@ -1,45 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="4ce16af3-9575-44bd-b534-ee68672e4f98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/杂烩/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DomBom.html" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/DomBom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/ajax.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlElement.html" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/htmlElement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interview.js" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/interview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/js基础.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js小知识.html" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/js小知识.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx入门.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/nginx入门.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node简介.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/node简介.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/sort.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssh 小细节.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/ssh 小细节.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/test.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue  不熟悉的地方.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/vue  不熟悉的地方.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack随笔.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/webpack随笔.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/手写promise.js" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/手写promise.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/链表.js" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/链表.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/sort.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +13,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -75,8 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/usr/local/node/bin/node" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -85,15 +47,6 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.webservices" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\111\blog\杂烩" />
-      <recent name="D:\111\blog" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
   </component>
   <component name="RunManager" selected="npm.npm serve">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:8080">
@@ -116,7 +69,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4ce16af3-9575-44bd-b534-ee68672e4f98" name="Default Changelist" comment="" />
+      <changelist id="cdb665a0-0177-4e1e-a52c-67fe8b7a7fd7" name="Default Changelist" comment="" />
       <created>1654002450199</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -128,12 +81,11 @@
       <workItem from="1656419932136" duration="693000" />
       <workItem from="1662466729242" duration="109000" />
       <workItem from="1665490412725" duration="8194000" />
-      <workItem from="1665622627414" duration="20220000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
