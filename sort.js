@@ -501,3 +501,17 @@ function quickSort(arr) {
 }
 
 
+const tasks = [];
+tasks.push(new Promise((resolve) => {
+    setTimeout(() => {
+        console.log(new Date, 1);
+        resolve(1);  // 这里一定要 resolve，否则代码不会按预期 work
+    }, 1000 * 1);   // 定时器的超时时间逐步增加
+}));
+
+async function aka() {
+    const m = await tasks[0]
+    console.log(m)
+}
+
+aka()
