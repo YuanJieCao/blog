@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4ce16af3-9575-44bd-b534-ee68672e4f98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+	      <change beforePath="$PROJECT_DIR$/interview.js" beforeDir="false" afterPath="$PROJECT_DIR$/interview.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/sort.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +48,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.webservices" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.npm serve">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:8080">
