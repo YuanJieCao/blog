@@ -20,26 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ce16af3-9575-44bd-b534-ee68672e4f98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/杂烩/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/jumple.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DomBom.html" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/DomBom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/ajax.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlElement.html" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/htmlElement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interview.js" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/interview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/js基础.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js小知识.html" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/js小知识.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx入门.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/nginx入门.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node简介.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/node简介.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/sort.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ssh 小细节.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/ssh 小细节.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/test.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue  不熟悉的地方.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/vue  不熟悉的地方.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack随笔.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/webpack随笔.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/手写promise.js" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/手写promise.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/链表.js" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/链表.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端基础/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/前端基础/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/杂烩/util.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -74,16 +58,21 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../项目/pns6.1_10_11_tags" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.webservices" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -128,7 +117,9 @@
       <workItem from="1656419932136" duration="693000" />
       <workItem from="1662466729242" duration="109000" />
       <workItem from="1665490412725" duration="8194000" />
-      <workItem from="1665622627414" duration="20220000" />
+      <workItem from="1665622627414" duration="20527000" />
+      <workItem from="1665707418731" duration="8958000" />
+      <workItem from="1665719942867" duration="13205000" />
     </task>
     <servers />
   </component>
@@ -152,9 +143,21 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="673" y="342" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1665555726021" />
-    <state x="409" y="115" key="SettingsEditor" timestamp="1665556901561">
+    <state x="582" y="428" key="#com.intellij.tools.ToolEditorDialog" timestamp="1665739079117">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="409" y="115" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1665556901561" />
+    <state x="582" y="428" key="#com.intellij.tools.ToolEditorDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1665739079117" />
+    <state x="755" y="267" key="FileChooserDialogImpl" timestamp="1665739087349">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="755" y="267" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1665739087349" />
+    <state x="215" y="194" key="SettingsEditor" timestamp="1665739683444">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="215" y="194" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1665739683444" />
+    <state x="536" y="77" width="840" height="1034" key="search.everywhere.popup" timestamp="1665732060237">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="536" y="77" width="840" height="1034" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1665732060237" />
   </component>
 </project>
