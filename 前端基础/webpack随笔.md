@@ -13,17 +13,13 @@
 6. postcss是个loader,传入参数：option:{plugins:()=>{require("")({插件的参数})}
 
 7. scopehoisting
-
    1. 本身的打包会形成闭包，如果模块很多，就会导致打包的体积增大。
    2. 使用了scope hoisting之后，他会进行判断，是否为引用，和单引用，单引用会直接内联到相应的模块中，如果是多引用会放在外面然后变量引入。
    3. 只支持es6语法，不适用common js语法。只能识别静态的，不能分析动态引入的require文件。并且将import和export打包成相应的特殊字符
 
 8. split chuck 
-
    1. syntax-dynamic-import 语法动态
-
    2. 某些组件的懒加载，tab的切换，import语
-
    3. ```
       fn(){import（“”）.then((res)=>{
       //需要加载的内容

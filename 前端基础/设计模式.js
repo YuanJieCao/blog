@@ -29,3 +29,6 @@ const ProxySingleton = (function () {
     let instance
 
 })()
+
+
+
