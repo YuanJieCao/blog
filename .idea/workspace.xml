@@ -20,14 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ce16af3-9575-44bd-b534-ee68672e4f98" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/前端基础/jsEndBase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/前端基础/jsBase.js" beforeDir="false" afterPath="$PROJECT_DIR$/前端基础/jsBase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/前端基础/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/前端基础/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/前端基础/设计模式.js" beforeDir="false" afterPath="$PROJECT_DIR$/前端基础/设计模式.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/杂烩/js基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/js基础.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/杂烩/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/杂烩/page2.html" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/page2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/杂烩/webpack随笔.md" beforeDir="false" afterPath="$PROJECT_DIR$/杂烩/webpack随笔.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端基础/js基础.js" beforeDir="false" afterPath="$PROJECT_DIR$/前端基础/js基础.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端基础/js基础.md" beforeDir="false" afterPath="$PROJECT_DIR$/前端基础/js基础.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端基础/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/前端基础/node.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -65,7 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zh.javascript.info" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../项目/Malaysia" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -81,8 +78,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\111\blog\杂烩" />
       <recent name="D:\111\blog" />
+      <recent name="D:\111\blog\前端基础" />
+      <recent name="D:\111\blog\杂烩" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -128,7 +126,10 @@
       <workItem from="1665969850971" duration="4436000" />
       <workItem from="1665978726565" duration="596000" />
       <workItem from="1666078150016" duration="4369000" />
-      <workItem from="1667868910520" duration="18928000" />
+      <workItem from="1667868910520" duration="19303000" />
+      <workItem from="1667954526803" duration="12867000" />
+      <workItem from="1668040326858" duration="4818000" />
+      <workItem from="1668070798765" duration="3565000" />
     </task>
     <servers />
   </component>
@@ -156,10 +157,14 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="582" y="428" key="#com.intellij.tools.ToolEditorDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1665739079117" />
-    <state x="755" y="267" key="FileChooserDialogImpl" timestamp="1667896624090">
+    <state x="1187" y="233" key="#npm_serve" timestamp="1667963409806">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="755" y="267" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1667896624090" />
+    <state x="1187" y="233" key="#npm_serve/0.0.2048.1112@0.0.2048.1112" timestamp="1667963409806" />
+    <state x="755" y="267" key="FileChooserDialogImpl" timestamp="1667975964862">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="755" y="267" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1667975964862" />
     <state x="215" y="194" key="SettingsEditor" timestamp="1665739683444">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

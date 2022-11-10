@@ -57,6 +57,13 @@ FunctionExectionContext = {
 // 变量环境（variable）
 
 
+
+
+
+
+
+
+
 //  toString,
 //  valueOf ToPrimitive(input[, PreferredType])   input要处理的值,PreferredType -非必选 表示要转换的类型 有number String
 //当不传入值的时候,除了input为日期的时候调用的是String 其余的时候都是默认有number
@@ -100,6 +107,13 @@ JSON.stringify("123")
 
 
 
+
+//事件循环
+
+//当事件循环进入给定的阶段时，他将执行特定于该阶段的任何操作，然后执行该队列中的回调，直到队列用尽，或者已经执行到最大的回调数
+
+
+//
 
 
 

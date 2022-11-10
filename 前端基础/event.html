@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+</div>
+<button id="btn">Alt+Shift+Click on me!</button>
+
+<script>
+    btn.onclick = function (event) {
+        if (event.altKey && event.shiftKey) {
+            alert('Hooray!');
+        }
+    };
+    //事件顺序
+    //    mousedown->mouseup->click
+</script>
+</body>
+</html>
