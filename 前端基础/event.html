@@ -5,19 +5,46 @@
     <title>Title</title>
 </head>
 <body>
-<div id="app">
 
-</div>
-<button id="btn">Alt+Shift+Click on me!</button>
+<button id="button">Alt+Shift+Click on me!</button>
 
 <script>
-    btn.onclick = function (event) {
-        if (event.altKey && event.shiftKey) {
-            alert('Hooray!');
-        }
-    };
-    //事件顺序
-    //    mousedown->mouseup->click
+
+    let sm = Symbol(2)
+    let ms = Symbol(3)
+    let smm = Symbol(4)
+    let add = {
+        [sm]: 123,
+        name: "小红"
+    }
+    add[ms] = "321"
+    Object.defineProperty(add, smm, {value: '我是undefined',})
+
+
+        // 如果使用 new ，就报错
+        // 如果 description 是 undefined，让 descString 为 undefined
+        // 否则 让 descString 为 ToString(description)
+        // 如果报错，就返回
+        // 返回一个新的唯一的 Symbol 值，它的内部属性 [[Description]] 值为 descString
+
+
+        // (function () {
+        //     debugger
+        //     var root = this
+        //     var symbolpolyfill = function symbol(description) {
+        //         if (this instanceof symbolpolyfill) throw new Error('Symbol is not constructor')
+        //         var descString = description === undefined ? undefined : String(description)//描述
+        //         var symbol = Object.create(null)
+        //         //给这个属性添加对象
+        //         Object.defineProperty(symbol, '__Description__', {
+        //                 value: descString,
+        //             }
+        //         );
+        //         return symbol
+        //     }
+        //     root.symbolpolyfill = symbolpolyfill
+        // })()
+
 </script>
 </body>
 </html>

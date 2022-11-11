@@ -34,7 +34,25 @@
     - 内部调用toNumber
   - 二元操作符+  
     - 内部调用ToPrimitive(input[,PreferedType]),只要由一个是字符串就是按照字符串相加，否则就是按照toNumber()相加
-    
+### 箭头函数
+    - 没有this
+    - 没有arguments
+    - 不能通过new 关键字调用  constructor属性  call属性  现在箭头函数没有constructor属性
+    - 
+### symbol类型
+       
+       
+       
+### 原型链
+  - 搞明白__proto__,prototype,constructor  
+    - __proto__,constructor 对象独有
+    - prototype 函数独有的
+    - 函数也是对象所以三个都拥有
+          
+  - js 中对象和函数的关系，函数是对象的一种
+  - 最后知道函数和构造函数的区别，任何函数都可以当构造函数，但不能将任何的函数叫做构造函数,只有当一个函数通过new关键字调用的时候才可以成为构造函数
+
+       
 ### 内存的清理
 - 栈内存
   1. 私有作用域
